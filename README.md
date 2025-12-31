@@ -1,94 +1,45 @@
-#🎯 "Mega Sena" Lottery Checker (C# Console App)#
+# 🎯 Mega da Virada Lottery Checker (C# Console App)
 
-A robust and production-ready C# Console Application that validates lottery bets against the official Mega Sena draw results, supporting multiple bets, variable bet sizes, and detailed result reporting.
+A robust **C# Console Application** designed to validate lottery bets against the official *Mega da Virada* draw results.  
+This project demonstrates **clean code practices**, **file handling**, **data validation**, and **user-friendly console output**, making it a strong addition to a professional portfolio.
 
-This project was designed to demonstrate clean code, defensive programming, and real-world file I/O handling in .NET.
+---
 
-🚀 Key Features
+## 🚀 Project Overview
 
-Reads official lottery draw numbers from console input
+This application reads lottery bets from a CSV file, compares them with the drawn numbers entered by the user, and determines whether any bet achieved:
 
-Loads bets from a CSV file (C:\apostas.csv)
+- **Sena (6 hits)**
+- **Quina (5 hits)**
+- **Quadra (4 hits)**
 
-Supports bets with 6 or more numbers
+The results are displayed in the console with **colored output** and also exported to a text file for record keeping.
 
-Automatically validates:
+---
 
-Number range (1–60)
+## ✨ Key Features
 
-Duplicated numbers
+- Console-based interaction
+- Input validation (numbers between 1 and 60, no duplicates)
+- Supports bets with **6 or more numbers**
+- Automatic detection of:
+  - 🏆 Sena
+  - 🥈 Quina
+  - 🥉 Quadra
+- Colored console output:
+  - Green for winning scenarios
+  - Red for no wins
+- File-based input and output
+- UTF-8 support (emojis and special characters)
+- Clean, readable, and maintainable code
 
-Minimum bet size
+---
 
-Identifies:
+## 📂 File Structure
 
-🏆 Sena (6 hits)
+```text
+C:\
+ └── apostas.csv
 
-🥈 Quina (5 hits)
-
-🥉 Quadra (4 hits)
-
-Displays:
-
-Matched numbers per bet
-
-Prize category per bet
-
-Uses color-coded console output:
-
-Green → Winning results
-
-Red → No prize
-
-Exports a full report to the user’s Downloads folder
-
-Fully compatible with Windows standalone execution
-
-🧠 Technical Highlights
-
-.NET Console Application
-
-Safe parsing and validation logic
-
-Uses LINQ for clean and expressive data comparison
-
-Defensive handling of invalid or malformed bets
-
-Ready for extension (unit tests, logging, UI, API, etc.)
-
-📄 Input Format
-Lottery Draw (console input)
-01 02 03 04 05 06
-
-Bets file (C:\apostas.csv)
-
-Each line represents one bet.
-Bets may contain 6 or more numbers:
-
-01 02 03 04 05 06
-10 11 12 13 14 15 16
-05 10 15 20 25 30 35 40
-
-📊 Output Example
-
-Console output highlights:
-
-Bet number
-
-Bet numbers
-
-Matched numbers
-
-Prize category
-
-Color-coded result
-
-A full report is also generated as:
-
-Downloads/resultado_mega.txt
-
-CI/CD pipeline integration
-
-📌 Author
-
-Developed as a portfolio project to showcase backend and system-level programming skills using C# and .NET.
+Downloads\
+ └── resultado_mega.txt
