@@ -1,4 +1,4 @@
-🎯 "Mega Sena" Lottery Checker (C# Console App)
+#🎯 "Mega Sena" Lottery Checker (C# Console App)#
 
 A robust and production-ready C# Console Application that validates lottery bets against the official Mega Sena draw results, supporting multiple bets, variable bet sizes, and detailed result reporting.
 
